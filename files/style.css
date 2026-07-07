@@ -2,16 +2,22 @@
    TOKENS
    ============================================================ */
 :root{
-  --bg: #09090b;
-  --bg-soft: #0d0d10;
-  --glass: rgba(255,255,255,0.06);
-  --glass-border: rgba(255,255,255,0.10);
-  --ivory: #f3ede4;
-  --rose-gold: #d9a5a0;
-  --warm-gold: #cbaa6b;
-  --burgundy: #4a1b24;
-  --pink-glow: #e8b8c4;
-  --muted: rgba(243,237,228,0.62);
+  --bg: #FAF7F2;
+  --bg-soft: #F7EFE6;
+
+  --glass: rgba(255,255,255,0.7);
+  --glass-border: rgba(200,169,106,0.28);
+
+  --ivory: #FAF7F2;
+  --rose-gold: #E8B7B7;
+  --warm-gold: #C8A96A;
+  --burgundy: #8C6570;
+  --pink-glow: #E8B7B7;
+
+  --muted: rgba(43,37,37,0.62);
+
+  --text-dark:#2B2525;
+  --paper:#FFFDF9;
 
   --serif: 'Cormorant Garamond', 'Times New Roman', serif;
   --display: 'Cinzel', var(--serif);
@@ -738,4 +744,447 @@ button:focus-visible, a:focus-visible{
   .section{ padding: 6rem 6vw; }
   .why-grid{ grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); }
   .cursor-glow{ display:none; }
+}
+/* ============================================================
+   IVORY ROMANCE THEME OVERRIDE
+   ============================================================ */
+
+
+body{
+background:#FAF7F2;
+color:#2B2525;
+}
+
+
+.opening{
+background:
+linear-gradient(
+135deg,
+#FAF7F2,
+#F8EEE8
+);
+}
+
+
+.opening-stars{
+display:none;
+}
+
+
+.aurora{
+
+background:
+radial-gradient(
+ellipse 60% 40% at 20% 20%,
+rgba(232,183,183,.22),
+transparent 60%
+),
+
+radial-gradient(
+ellipse 50% 40% at 80% 30%,
+rgba(200,169,106,.18),
+transparent 60%
+),
+
+radial-gradient(
+ellipse 55% 45% at 50% 85%,
+rgba(220,200,176,.25),
+transparent 60%
+);
+
+filter:blur(50px);
+
+}
+
+
+
+.opening::before,
+.opening::after{
+
+content:"";
+position:absolute;
+
+width:240px;
+height:240px;
+
+background:
+radial-gradient(
+circle,
+rgba(232,183,183,.25),
+transparent 70%
+);
+
+filter:blur(30px);
+
+animation:
+softFloat 12s ease-in-out infinite alternate;
+
+}
+
+
+.opening::before{
+top:10%;
+left:10%;
+}
+
+
+.opening::after{
+bottom:10%;
+right:10%;
+}
+
+
+@keyframes softFloat{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-30px);
+}
+
+}
+
+
+
+.op-line,
+.hero-sub,
+.future-text{
+
+color:#2B2525;
+
+}
+
+
+.op-line.op-signature{
+
+color:rgba(43,37,37,.65);
+
+}
+
+
+.begin-btn{
+
+background:rgba(255,255,255,.55);
+border-color:#C8A96A;
+color:#2B2525;
+
+}
+
+
+.begin-btn:hover{
+
+background:#ffffff;
+
+}
+
+
+
+.progress-rail{
+
+background:rgba(200,169,106,.15);
+
+}
+
+
+.progress-fill{
+
+background:
+linear-gradient(
+90deg,
+#E8B7B7,
+#C8A96A
+);
+
+}
+
+
+
+.hero-title{
+
+background:
+linear-gradient(
+120deg,
+#2B2525,
+#E8B7B7 50%,
+#C8A96A
+);
+
+-webkit-background-clip:text;
+background-clip:text;
+
+}
+
+
+
+.section-title{
+
+color:#2B2525;
+
+}
+
+
+
+.t-icon{
+
+background:
+rgba(255,255,255,.7);
+
+border-color:
+rgba(200,169,106,.3);
+
+}
+
+
+
+.t-card,
+.why-card,
+.bubble{
+
+background:
+rgba(255,255,255,.7);
+
+border-color:
+rgba(200,169,106,.25);
+
+box-shadow:
+0 15px 35px rgba(43,37,37,.08);
+
+}
+
+
+
+.t-card:hover,
+.why-card:hover{
+
+box-shadow:
+0 20px 45px rgba(43,37,37,.12);
+
+}
+
+
+
+.timeline-spine{
+
+background:
+rgba(200,169,106,.25);
+
+}
+
+
+
+.timeline-spine-fill{
+
+background:
+linear-gradient(
+180deg,
+#E8B7B7,
+#C8A96A
+);
+
+}
+
+
+
+.why-card::before{
+
+background:
+
+radial-gradient(
+180px 100px at 20% 0%,
+rgba(232,183,183,.25),
+transparent 60%
+);
+
+}
+
+
+
+.polaroid{
+
+background:#FFFDF9;
+
+box-shadow:
+
+0 18px 40px rgba(43,37,37,.15);
+
+}
+
+
+
+.polaroid-face.gaming{
+
+background:
+linear-gradient(
+135deg,
+#E8B7B7,
+#DCC8B0
+);
+
+}
+
+
+.polaroid-face.calls{
+
+background:
+linear-gradient(
+135deg,
+#FAF7F2,
+#E8B7B7
+);
+
+}
+
+
+.polaroid-face.gifts{
+
+background:
+linear-gradient(
+135deg,
+#DCC8B0,
+#E8B7B7
+);
+
+}
+
+
+.polaroid-face.laughs{
+
+background:
+linear-gradient(
+135deg,
+#F7EFE6,
+#C8A96A
+);
+
+}
+
+
+.polaroid-face.comfort{
+
+background:
+linear-gradient(
+135deg,
+#FFFDF9,
+#DCC8B0
+);
+
+}
+
+
+.polaroid-face.future{
+
+background:
+linear-gradient(
+135deg,
+#FAF7F2,
+#C8A96A
+);
+
+}
+
+
+
+.quote-card{
+
+background:
+linear-gradient(
+90deg,
+rgba(255,255,255,.7),
+transparent
+);
+
+border-left-color:#E8B7B7;
+
+}
+
+
+
+.letter-paper{
+
+background:
+
+linear-gradient(
+180deg,
+rgba(255,255,255,.85),
+rgba(255,253,249,.95)
+);
+
+box-shadow:
+
+0 30px 80px rgba(43,37,37,.12);
+
+}
+
+
+
+.letter-paper p{
+
+color:
+rgba(43,37,37,.85);
+
+}
+
+
+
+.bubble-big{
+
+background:
+
+linear-gradient(
+120deg,
+#E8B7B7,
+#C8A96A
+);
+
+color:#2B2525;
+
+}
+
+
+
+.final-title{
+
+background:
+
+linear-gradient(
+120deg,
+#E8B7B7,
+#2B2525,
+#C8A96A
+);
+
+-webkit-background-clip:text;
+background-clip:text;
+
+}
+
+
+
+.signature{
+
+color:#2B2525;
+
+}
+
+
+
+.site-footer{
+
+color:
+rgba(43,37,37,.4);
+
+}
+
+
+
+.secret-btn{
+
+border-color:
+rgba(200,169,106,.35);
+
+color:
+rgba(43,37,37,.55);
+
 }
